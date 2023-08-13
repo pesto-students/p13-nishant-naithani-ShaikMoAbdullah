@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Shaik Mohammad Abdullah">
+  <meta name="description" content="This is Birthday Messenger">
+  <title>Happy Birthday Message Creator</title>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    #message-section,
+    #email-section,
+    #date-section,
+    #color-section,
+    #number-of-blinks-section,
+    #music-section {
+      display: flex;
+    }
+
+
+    #email {
+      position: relative;
+      left: 8rem;
+    }
+
+    #message {
+      position: relative;
+      left: 6.8rem;
+    }
+
+    #date {
+      position: relative;
+      left: 5.5rem;
+    }
+
+    #message-color {
+      position: relative;
+      left: 4.5rem;
+    }
+
+    #number-of-blinks {
+      position: relative;
+      left: 3.6rem;
+    }
+
+    #music {
+      position: relative;
+      left: 4.8rem;
+    }
+
+    #submit-button {
+      width: 10rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Happy Birthday Message Creator</h1>
+  </header>
+  <main>
+    <form action="#">
+      <section id="message-section">
+        <label for="message">Message</label>
+        <input type="text" name="message" id="message">
+      </section>
+      <section id="email-section">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="name@domain.com">
+      </section>
+      <section id="date-section">
+        <label for="date">Date to send</label>
+        <input type="date" name="date" id="date">
+      </section>
+      <section id="color-section">
+        <label for="message-color">Message Color</label>
+        <input type="color" name="message-color" id="message-color">
+      </section>
+      <section id="number-of-blinks-section">
+        <label for="number-of-blinks">Number of blinks</label>
+        <input type="number" name="number-of-blinks" id="number-of-blinks" value="0" min="0" max="10">
+      </section>
+      <section id="music-section">
+        <label for="music">Music Volume</label>
+        <input type="range" name="music" id="music" value="20" min="0" max="50">
+      </section>
+      <input type="submit" value="Send Birthday Message" id="submit-button">
+    </form>
+  </main>
+
+</body>
+
+</html>
