@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Shaik Mohammad Abdullah">
+  <meta name="description" content="This is Starting lineup">
+  <title>Starting Lineup</title>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    #date {
+      width: fit-content;
+    }
+
+    #submit-button {
+      width: 5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Starting Lineup</h1>
+  </header>
+  <main>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Status: </legend>
+        <input type="radio" name="status" id="draft">
+        <label for="draft">Draft</label>
+        <input type="radio" name="status" id="final" checked>
+        <label for="final">Final</label>
+      </fieldset>
+      <section id="date-section">
+        <label for="date">Date</label>
+        <select name="date" id="date">
+          <option value="March20">March 20</option>
+          <option value="March20">March 24</option>
+          <option value="March20">April 2</option>
+          <option value="March20">April 6</option>
+          <option value="March20">April 13</option>
+        </select>
+      </section>
+      <fieldset>
+        <legend>Players: </legend>
+        <section>
+          <input type="checkbox" name="aarav" id="aarav">
+          <label for="aarav">Aarav Agarwal</label>
+        </section>
+        <section>
+          <input type="checkbox" name="ava" id="ava">
+          <label for="ava">Ava Johnson</label>
+        </section>
+        <section>
+          <input type="checkbox" name="julio" id="julio">
+          <label for="julio">Julio Ortiz</label>
+        </section>
+        <section>
+          <input type="checkbox" name="liam" id="liam">
+          <label for="liam">Liam Rubio</label>
+        </section>
+        <section>
+          <input type="checkbox" name="emma" id="emma">
+          <label for="emma">Emma Witherspoon</label>
+        </section>
+      </fieldset>
+      <input type="submit" value="Submit" id="submit-button">
+    </form>
+  </main>
+</body>
+
+</html>
