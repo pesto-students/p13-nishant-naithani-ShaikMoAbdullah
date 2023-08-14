@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+table {
+  width: 100%;
+  border: 2px solid #228b21;
+  border-collapse: collapse;
+}
+
+thead tr:first-child th:first-child {
+  background-color: #228b21;
+  color: white;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: center;
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: #f0fff0;
+}
