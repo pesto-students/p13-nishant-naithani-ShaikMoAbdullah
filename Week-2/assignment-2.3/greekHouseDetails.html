@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Shaik Mohammad Abdullah">
+  <meta name="description" content="This is Restaurant reviews website">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Restaurant reviews</title>
+  <style>
+    #main-street-cafe {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .checked {
+      color: orange;
+    }
+
+    .rating {
+      margin-top: 1rem;
+    }
+
+    h3>a {
+      color: black;
+    }
+
+    ul {
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+    }
+
+    ul>li {
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Restaurant Reviews</h1>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./addReviews.html">Add Reviews</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article id="greek-house-cafe">
+      <h2>Greek House</h2>
+      <img src="./images/restaurant2.jpeg" alt="Restaurant 2 image" width="400rem">
+      <section class="rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+      </section>
+      <section class="more-details">
+        <h3>Overview</h3>
+        <p>Cuisine: Greek, Mediterranean</p>
+        <p>Price: $$$</p>
+        <p>Greek food at its best in a charming setting</p>
+        <h3>Reviews</h3>
+        <section class="rating">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </section>
+        <p>Andrew: My wife and I celebrated our anniversary here and loved it</p>
+        <section class="rating">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </section>
+        <p>Pamela: Not bad</p>
+        <section class="rating">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </section>
+        <p>Greg: Its a little expensive. But, The atmospehere is fantastic</p>
+      </section>
+    </article>
+  </main>
+  <footer>
+    &copy; 2023 Restaurant Reviews
+  </footer>
+</body>
+
+</html>

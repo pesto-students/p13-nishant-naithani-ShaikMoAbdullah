@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  background-color: red;
+  color: white;
+  padding: 0.25rem;
+}
+
+#date {
+  color: lightgray;
+}

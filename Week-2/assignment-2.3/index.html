@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Shaik Mohammad Abdullah">
+  <meta name="description" content="This is Restaurant reviews website">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Restaurant reviews</title>
+  <style>
+    #main-street-cafe {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .checked {
+      color: orange;
+    }
+
+    .rating {
+      margin-top: 1rem;
+    }
+
+    h3>a {
+      color: black;
+    }
+
+    ul {
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+    }
+
+    ul>li {
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Restaurant Reviews</h1>
+    <nav>
+      <ul>
+        <li><a href=".">Home</a></li>
+        <li><a href="./addReviews.html">Add Reviews</a></li>
+        <li><a href="./about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article id="main-street-cafe">
+      <h2><a href="./mainStreetDetails.html">Main Street Cafe</a></h2>
+      <img src="./images/restaurant1.jpeg" alt="Restaurant 1 image" width="400rem">
+      <section class="rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </section>
+      <p>Featuring a wide variety of foods including burgers, chicken and sandwiches</p>
+    </article>
+    <article id="greek-house-cafe">
+      <h2><a href="./greekHouseDetails.html">Greek house</a></h2>
+      <img src="./images/restaurant2.jpeg" alt="Restaurant 2 image" width="400rem">
+      <section class="rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+      </section>
+      <p>Greek food at its best in a charming setting</p>
+    </article>
+  </main>
+  <footer>
+    &copy; 2023 Restaurant Reviews
+  </footer>
+</body>
+
+</html>
