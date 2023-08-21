@@ -1,0 +1,44 @@
+main {
+  width: 600px;
+  height: 280px;
+  border: 2px solid blue;
+  padding: 5px;
+  background-color: #f0f0f0;
+}
+header > h1 {
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+  font-size: 16pt;
+}
+
+section#text-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section#one {
+  background-color: yellow;
+  width: 12rem;
+  padding: 0.5rem;
+}
+
+section#two {
+  width: 20rem;
+  margin-left: 1rem;
+}
+
+section#three {
+  width: 12rem;
+  background-color: orange;
+  margin: 1rem 1rem 1rem 3rem;
+
+  padding: 0.5rem;
+}
+
+section#four {
+  width: 12rem;
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+}
