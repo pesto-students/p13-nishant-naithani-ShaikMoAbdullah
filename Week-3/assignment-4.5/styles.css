@@ -1,6 +1,6 @@
 main {
   width: 600px;
-  height: 280px;
+  height: 320px;
   border: 2px solid blue;
   padding: 5px;
   background-color: #f0f0f0;
@@ -17,26 +17,25 @@ section#text-container {
   flex-wrap: wrap;
 }
 
-section#one {
+p#first-para {
   background-color: yellow;
   width: 12rem;
   padding: 0.5rem;
 }
 
-section#two {
+p#second-para {
   width: 20rem;
   margin-left: 1rem;
 }
 
-section#three {
+p#third-para {
   width: 12rem;
   background-color: orange;
   margin: 1rem 1rem 1rem 3rem;
-
   padding: 0.5rem;
 }
 
-section#four {
+p#fourth-para {
   width: 12rem;
   background-color: red;
   color: white;

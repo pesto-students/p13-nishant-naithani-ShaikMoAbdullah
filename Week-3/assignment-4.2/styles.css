@@ -25,7 +25,7 @@ main.content {
   display: flex;
 }
 
-section.main-content {
+.recipe {
   display: flex;
   flex-wrap: wrap;
   width: 60%;
