@@ -30,14 +30,22 @@ function getTemperatureForCity(cityName) {
 const memoizeTemperatureForCity = memoize(getTemperatureForCity);
 
 // Memoized temperature for city
+console.time("temperature1 first time");
 const temperature1 = memoizeTemperatureForCity("New York");
 console.log(temperature1); // 20
+console.timeEnd("temperature1 first time");
 
+console.time("temperature1 second time");
 const temperature2 = memoizeTemperatureForCity("New York");
 console.log(temperature2); // 20 (retrieved from cache)
+console.timeEnd("temperature1 second time");
 
+console.time("temperature2 first time");
 const temperature3 = memoizeTemperatureForCity("London");
 console.log(temperature3); // 18
+console.timeEnd("temperature2 first time");
 
+console.time("temperature2 second time");
 const temperature4 = memoizeTemperatureForCity("London");
 console.log(temperature4); // 18 (retrieved from cache)
+console.timeEnd("temperature2 second time");
