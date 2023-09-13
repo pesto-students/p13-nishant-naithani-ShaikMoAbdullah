@@ -85,12 +85,19 @@ class BankAccount {
     this.#balance = balance;
     this.#accountHolderName = accountHolderName;
   }
+  getBalancePrivateField() {
+    return this.#balance;
+  }
+  setBalancePrivateField(value) {
+    this.#balance = value;
+  }
 }
 
 class CheckingAccount extends BankAccount {
   constructor(accountNumber, balance, accountHolderName, amount) {
     super(accountNumber, balance, accountHolderName);
     this.amount = amount;
+    this.balance = this.getBalancePrivateField();
   }
   deposit() {
     return (this.balance += this.amount);
@@ -107,6 +114,7 @@ class SavingsAccount extends BankAccount {
   constructor(accountNumber, balance, accountHolderName, amount) {
     super(accountNumber, balance, accountHolderName);
     this.amount = amount;
+    this.balance = this.getBalancePrivateField();
   }
   deposit() {
     return (this.balance += this.amount);
