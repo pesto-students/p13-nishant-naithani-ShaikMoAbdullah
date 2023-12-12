@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+sup {
+  color: red;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#submit-button {
+  padding: 0.75rem;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.form {
+  padding: 0.5rem;
+  background-color: #dbf0f8;
+  border: 1px solid grey;
+}
+
+#product {
+  position: relative;
+  left: 3.5rem;
+}
+
+#purchase {
+  position: relative;
+  left: 1rem;
+}
+#rating {
+  position: relative;
+  left: 4rem;
+}
+#comments {
+  position: relative;
+  left: 2.5rem;
+  padding: 0.5rem;
+  border: 1px solid grey;
+}

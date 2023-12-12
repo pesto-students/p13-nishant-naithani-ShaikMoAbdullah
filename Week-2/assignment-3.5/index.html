@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Shaik Mohammad Abdullah">
+  <meta name="description" content="Rating">
+  <link rel="stylesheet" href="styles.css">
+  <title>Rating</title>
+</head>
+
+<body>
+  <header>
+    <h1>Rate a Product</h1>
+  </header>
+  <main>
+    <p><sup>*</sup> indicates a required field</p>
+    <form action="#" method="post">
+      <section class="product">
+        <label for="product">Product<sup>*</sup></label>
+        <input type="text" name="product" id="product" class="form">
+      </section>
+      <section>
+        <label for="purchase">Purchase Date<sup>*</sup></label>
+        <input type="date" name="purchase" id="purchase" class="form">
+      </section>
+      <section>
+        <label for="rating">Rating<sup>*</sup></label>
+        <input type="number" name="rating" id="rating" class="form">
+      </section>
+      <section>
+        <label for="comments">Comments</label>
+        <textarea name="comments" id="comments" cols="30" rows="4"></textarea>
+      </section>
+      <input type="submit" value="Submit Rating" id="submit-button">
+    </form>
+  </main>
+</body>
+
+</html>

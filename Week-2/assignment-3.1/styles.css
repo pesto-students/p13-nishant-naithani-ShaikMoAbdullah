@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.table-section {
+  width: 49.25%;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #2cb1b4;
+  width: 100%;
+  color: white;
+  padding: 0.5rem;
+}
+
+td {
+  border: 1px solid rgb(222, 218, 218);
+  padding: 1rem;
+}
+
+#total-cost {
+  color: #2222ff;
+}
