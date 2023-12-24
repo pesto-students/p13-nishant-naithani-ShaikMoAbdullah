@@ -1,7 +1,7 @@
-import "../styles/book.css";
-import { memo } from "react";
+import React from "react";
 
-function Book({ title, author, year }) {
+const BookDetail = (props) => {
+  const { title, author, year } = props;
   return (
     <div className="book">
       <h3>{title}</h3>
@@ -9,6 +9,6 @@ function Book({ title, author, year }) {
       <p>Year: {year}</p>
     </div>
   );
-}
+};
 
-export default memo(Book);
+export default BookDetail;
