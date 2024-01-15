@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Book from "./Book";
+import BookForm from "./BookForm";
 
 class BookList extends Component {
   constructor(props) {
@@ -11,17 +12,47 @@ class BookList extends Component {
         { title: "Book 3", author: "Author 3", year: 2022 },
       ],
     };
+    this.addBook = this.addBook.bind(this);
+  }
+
+  addBook(newBook) {
+    this.setState((prevState) => ({
+      books: [...prevState.books, newBook],
+    }));
+  }
+
+  deleteBook(toDeleteBook) {
+    const remainingBooks = this.state.books.filter(
+      (book) => book !== toDeleteBook
+    );
+    this.setState(() => ({
+      books: remainingBooks,
+    }));
   }
 
   render() {
-    return this.state.books.map((book) => (
-      <Book
-        key={book.title}
-        title={book.title}
-        author={book.author}
-        year={book.year}
-      />
-    ));
+    return (
+      <div className="flex flex-col gap-4">
+        <BookForm books={this.state.books} addBook={this.addBook} />
+        {this.state.books.length > 0
+          ? this.state.books.map((book) => (
+              <div key={book.title} className="flex flex-col">
+                <Book
+                  title={book.title}
+                  author={book.author}
+                  year={book.year}
+                />
+                <button
+                  className="border-2 border-black rounded p-1 w-fit"
+                  onClick={() => this.deleteBook(book)}
+                >
+                  Delete book
+                </button>
+              </div>
+            ))
+          : "No data available"}
+      </div>
+    );
   }
 }
 
