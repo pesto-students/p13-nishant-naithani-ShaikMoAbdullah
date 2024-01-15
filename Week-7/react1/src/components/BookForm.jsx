@@ -20,9 +20,9 @@ const BookForm = ({ books, addBook }) => {
   const { title, author, year } = bookFormState;
 
   return (
-    <>
+    <div className="flex flex-col gap-4">
       <header>
-        <h1>Books Form</h1>
+        <h1 className="font-bold text-2xl">Books Form</h1>
       </header>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div id="title-section" className="flex gap-4">
@@ -65,7 +65,7 @@ const BookForm = ({ books, addBook }) => {
           Submit
         </button>
       </form>
-    </>
+    </div>
   );
 };
 

@@ -32,25 +32,27 @@ class BookList extends Component {
 
   render() {
     return (
-      <div className="flex flex-col gap-4">
+      <div className="flex gap-12">
         <BookForm books={this.state.books} addBook={this.addBook} />
-        {this.state.books.length > 0
-          ? this.state.books.map((book) => (
-              <div key={book.title} className="flex flex-col">
-                <Book
-                  title={book.title}
-                  author={book.author}
-                  year={book.year}
-                />
-                <button
-                  className="border-2 border-black rounded p-1 w-fit"
-                  onClick={() => this.deleteBook(book)}
-                >
-                  Delete book
-                </button>
-              </div>
-            ))
-          : "No data available"}
+        <div className="w-full flex flex-wrap gap-12">
+          {this.state.books.length > 0
+            ? this.state.books.map((book, index) => (
+                <div key={book.index} className="flex flex-col">
+                  <Book
+                    title={book.title}
+                    author={book.author}
+                    year={book.year}
+                  />
+                  <button
+                    className="border-2 border-black rounded p-1 w-fit"
+                    onClick={() => this.deleteBook(book)}
+                  >
+                    Delete book
+                  </button>
+                </div>
+              ))
+            : "No data available"}
+        </div>
       </div>
     );
   }
