@@ -1,61 +1,66 @@
-import { Component } from "react";
+import { createContext, useState } from "react";
 import Book from "./Book";
 import BookForm from "./BookForm";
+import BookDataLoader from "./BookDataLoader";
+import useBookFilter from "../hooks/useBookFilter";
+import ThemeSwitcher from "./ThemeSwitcher";
 
-class BookList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: [
-        { title: "Book 1", author: "Author 1", year: 2020 },
-        { title: "Book 2", author: "Author 2", year: 2018 },
-        { title: "Book 3", author: "Author 3", year: 2022 },
-      ],
-    };
-    this.addBook = this.addBook.bind(this);
+export const ThemeContext = createContext();
+function BookList() {
+  const [themeValue, setThemeValue] = useState("light");
+  const [books, setBooks] = useState([
+    { title: "Book 1", author: "Author 1", year: 2020 },
+    { title: "Book 2", author: "Author 2", year: 2018 },
+    { title: "Book 3", author: "Author 3", year: 2022 },
+  ]);
+
+  useBookFilter(books);
+
+  function addBook(newBook) {
+    setBooks([...books, newBook]);
   }
 
-  addBook(newBook) {
-    this.setState((prevState) => ({
-      books: [...prevState.books, newBook],
-    }));
+  function deleteBook(toDeleteBook) {
+    const remainingBooks = books.filter((book) => book !== toDeleteBook);
+    setBooks([...books, remainingBooks]);
   }
 
-  deleteBook(toDeleteBook) {
-    const remainingBooks = this.state.books.filter(
-      (book) => book !== toDeleteBook
-    );
-    this.setState(() => ({
-      books: remainingBooks,
-    }));
-  }
-
-  render() {
-    return (
+  return (
+    <ThemeContext.Provider value={themeValue}>
       <div className="flex gap-12">
-        <BookForm books={this.state.books} addBook={this.addBook} />
+        <ThemeSwitcher />
+        <button
+          onClick={() =>
+            setThemeValue(themeValue === "light" ? "dark" : "light")
+          }
+        >
+          Switch theme
+        </button>
+        <BookForm books={books} addBook={addBook} />
         <div className="w-full flex flex-wrap gap-12">
-          {this.state.books.length > 0
-            ? this.state.books.map((book, index) => (
-                <div key={book.index} className="flex flex-col">
-                  <Book
-                    title={book.title}
-                    author={book.author}
-                    year={book.year}
-                  />
-                  <button
-                    className="border-2 border-black rounded p-1 w-fit"
-                    onClick={() => this.deleteBook(book)}
-                  >
-                    Delete book
-                  </button>
-                </div>
-              ))
-            : "No data available"}
+          {books.length > 0 ? (
+            books.map((book, index) => (
+              <div key={index} className="flex flex-col">
+                <Book
+                  title={book.title}
+                  author={book.author}
+                  year={book.year}
+                />
+                <button
+                  className="border-2 border-black rounded p-1 w-fit"
+                  onClick={() => deleteBook(book)}
+                >
+                  Delete book
+                </button>
+              </div>
+            ))
+          ) : (
+            <BookDataLoader books={books} setBooks={setBooks} />
+          )}
         </div>
       </div>
-    );
-  }
+    </ThemeContext.Provider>
+  );
 }
 
 export default BookList;
