@@ -1,20 +1,23 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
 import Home from "./components/Home";
+import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
-import Contacts from "./components/Contacts";
 import Skills from "./components/Skills";
-import Navbar from "./components/Navbar";
+import Contacts from "./components/Contacts";
+import Blogs from "./components/Blogs";
+import BlogDetail from "./components/BlogDetail";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="projects" element={<Projects />} />
-        <Route path="contacts" element={<Contacts />} />
         <Route path="skills" element={<Skills />} />
+        <Route path="contacts" element={<Contacts />} />
+        <Route path="blogs" element={<Blogs />} />
+        <Route path="/blogs/:blogId" element={<BlogDetail />} />
       </Routes>
     </Router>
   );
